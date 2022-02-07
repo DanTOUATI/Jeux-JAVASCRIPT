@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<title>Machine a sous</title>
+	<link rel="stylesheet" href="../CSS/MAS.css">
+</head>
+
+<body onload="load();">
+	
+			<div id="game">
+				<!-- Affichage première page du pseudo -->
+				<section id="pseudo_input">
+						<h1 id="titre">Bienvenue au jeu de la Machine à Sous</h1>
+						<input type="text" id="pseudo" placeholder="Pseudo...">
+						<br><br>
+						<button id="btnOk" onclick="choosePseudo();">OK</button>
+						<br><br>
+						<h3>Quelques règles avant de rentrer ton pseudo : </h3>
+						<img id="règles" src="../IMAGES/Info/Rules.png" alt="" width="700px">
+				</section>
+				<!-- Affichage du jeu avec les 4 symboles de carte tirée aléatoirement -->
+				<section id="game_cards">
+					<div class="cards">  
+						<div class="slot">
+							<img class="img" id="slot1" src="../IMAGES/Cartes/0.png">
+						</div>
+						<div class="slot">
+							<img class="img" id="slot2" src="../IMAGES/Cartes/0.png">
+						</div>
+						<div class="slot">
+							<img class="img" id="slot3" src="../IMAGES/Cartes/0.png">
+						</div>
+						<div class="slot">
+							<img class="img" id="slot4" src="../IMAGES/Cartes/0.png">
+						</div>
+					</div>
+				</section>
+
+				<!-- Audio -->
+				<audio id="CoinWin" controls preload="none" hidden>
+					<source src="../IMAGES/sounds/CoinWin.mp3" type="audio/mp3" >
+				</audio>
+				<audio id="Jackpot" controls preload="none" hidden>
+					<source src="../IMAGES/sounds/Jackpot.mp3" type="audio/mp3" >
+				</audio>
+				<audio id="SpinWheel" controls preload="none" hidden loop>
+					<source src="../IMAGES/sounds/SpinWheel.mp3" type="audio/mp3" >
+				</audio>
+
+				<!-- Affichage des boutons de jeu et sur les actions de lancement/arrêt -->
+				<section id="game_content">
+							<a id="buttonstart" onclick="start();">Démarrer</a>
+							<a id="buttonagain" onclick="playagain();" hidden>Rejouer</a>
+							<a id="buttonstop" onclick="stop();" hidden>Stop</a>
+				</section>
+
+
+				<!-- Affichage des cadres d'information de la partie et du système de mise -->
+				<section id="game_info">
+					<div id="zoneMise">
+						<h2>Mise</h2>								
+						<label for="option1">
+							<input type="radio" id="option1" name="nb_mise" value="1" checked>
+							<span>Aucune mise</span>
+						</label>
+						<br>
+						<label for="option2">
+							<input type="radio" id="option2" name="nb_mise" value="2">
+							<span>Mise doublée (Gain x2 sinon -200pts)</span>
+						</label>
+						<br>
+						<label for="option3">
+							<input type="radio" id="option3" name="nb_mise" value="3">
+							<span>Mise triplée (Gain x3 sinon -400pts)</span>
+						</label>
+					</div>
+
+					<div id="zoneInfos">
+						<div >
+							<h2>Informations</h2>
+						</div>
+						<div id="aff"></div>
+					</div>
+				</section>
+						
+			</div> 
+
+	<!--Script-->
+	<script src="../JQUERY/MAS.js"></script>
+</body>
+</html>

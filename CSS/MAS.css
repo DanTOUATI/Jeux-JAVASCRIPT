@@ -1,0 +1,121 @@
+/*CSS globale*/
+body 
+{
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  background-image: url(../IMAGES/background.jpg);
+}
+
+#titre
+{
+  text-align: center;
+  margin-top: 40px;
+  background-color: rgb(240, 125, 144);
+  font-size: 35px;
+}
+
+#pseudo
+{
+  width: 200px;
+  height: 30px;
+  cursor: pointer;
+  border-color: rgb(240, 125, 144);
+  border-radius: 5px;
+  margin-left: 40%;
+  margin-top: 30px;
+}
+
+#btnOk
+{
+  width: 100px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 44%;
+  font-size: 15px;
+}
+#btnOk:hover
+{
+  background-color: rgb(240, 125, 144);
+}
+
+h3
+{
+  text-align: center;
+}
+
+#règles
+{
+  margin-left: 23%;
+}
+
+#game_cards
+{
+  margin-left: 35%;
+  margin-top: 70px;
+}
+
+.slot 
+{
+  float: left;
+}
+
+#buttonstart
+{
+cursor: pointer;
+margin-left: 47%;
+position: relative;
+top: 10px;
+left: 3px;
+border-style:solid;
+border-color: black;
+}
+
+
+#buttonagain
+{
+  cursor: pointer;
+  margin-left: 47%;
+  position: relative;
+  top: 10px;
+  left: 20px;
+  border-style:solid;
+  border-color: black;
+}
+
+#buttonstop
+{
+  cursor: pointer;
+  margin-left: 47%;
+  position: relative;
+  top: 10px;
+  left: 20px;
+  border-style:solid;
+  border-color: black;
+}
+
+#zoneMise
+{
+  margin-left: 250px;
+  margin-top: 100px;
+  border-style: dashed;
+  width: 300px;
+}
+
+#zoneMise:hover
+{
+ background-color: rgb(240, 125, 144);
+}
+
+#zoneInfos
+{
+  margin-left: 800px;
+  margin-top: -130px;
+  border-style: dashed;
+  width: 300px;
+}
+
+#zoneInfos:hover
+{
+  background-color: rgb(240, 125, 144);
+}
+
+
